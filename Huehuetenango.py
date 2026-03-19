@@ -124,14 +124,39 @@ if st.button("INICIAR PROCESO") and uploaded_pdfs and uploaded_xlsx:
 
         # 2. MASTER MUNICIPALITY DICTIONARY
         MUNICIPIOS = {
-            1: {"nombre_oficial": "Totonicapán", "alias_pdf": ["totonicapan totonicapan", "totonicapan, totonicapan", "totonicapan"]},
-            2: {"nombre_oficial": "San Cristóbal Totonicapán", "alias_pdf": ["san cristobal totonicapan", "san cristobal"]},
-            3: {"nombre_oficial": "San Francisco El Alto", "alias_pdf": ["san francisco el alto", "san francisco"]},
-            4: {"nombre_oficial": "San Andrés Xecul", "alias_pdf": ["san andres xecul", "san andres"]},
-            5: {"nombre_oficial": "Momostenango", "alias_pdf": ["momostenango"]},
-            6: {"nombre_oficial": "Santa María Chiquimula", "alias_pdf": ["santa maria chiquimula", "sta maria chiquimula", "santa maria", "sta maria"]},
-            7: {"nombre_oficial": "Santa Lucía La Reforma", "alias_pdf": ["santa lucia la reforma", "sta lucia la reforma", "santa lucia", "sta lucia"]},
-            8: {"nombre_oficial": "San Bartolo Aguas Calientes", "alias_pdf": ["san bartolo aguas calientes", "san bartolo"]}
+            1: {"nombre_oficial": "Aguacatan", "alias_pdf": [""]},
+            2: {"nombre_oficial": "Chiantla", "alias_pdf": [""]},
+            3: {"nombre_oficial": "Colotenango", "alias_pdf": [""]},
+            4: {"nombre_oficial": "Concepcion Huista", "alias_pdf": [""]},
+            5: {"nombre_oficial": "Culico", "alias_pdf": [""]},
+            6: {"nombre_oficial": "Huehuetenango", "alias_pdf": [""]},
+            7: {"nombre_oficial": "Jacaltenango", "alias_pdf": [""]},
+            8: {"nombre_oficial": "La Democracia", "alias_pdf": [""]},
+            9: {"nombre_oficial": "La Libertad", "alias_pdf": [""]},
+            10: {"nombre_oficial": "Malacatancito", "alias_pdf": [""]},
+            11: {"nombre_oficial": "Nenton", "alias_pdf": [""]},
+            12: {"nombre_oficial": "Petatan", "alias_pdf": [""]},
+            13: {"nombre_oficial": "San Anotnio Huista", "alias_pdf": [""]},
+            14: {"nombre_oficial": "San Gaspar Ixchil", "alias_pdf": [""]},
+            15: {"nombre_oficial": "San Ildefonso Ixtahuacan", "alias_pdf": [""]},
+            16: {"nombre_oficial": "San Juan Atitan", "alias_pdf": [""]},
+            17: {"nombre_oficial": "San Juan Ixcoy", "alias_pdf": [""]},
+            18: {"nombre_oficial": "San Mateo Ixtatan", "alias_pdf": [""]},
+            19: {"nombre_oficial": "San Miguel Acatan", "alias_pdf": [""]},
+            20: {"nombre_oficial": "San Pedro Necta", "alias_pdf": [""]},
+            21: {"nombre_oficial": "San Pedro Soloma", "alias_pdf": [""]},
+            22: {"nombre_oficial": "San Rafael La Independencia", "alias_pdf": [""]},
+            23: {"nombre_oficial": "San Rafael Petzal", "alias_pdf": [""]},
+            24: {"nombre_oficial": "San Sebastian Coatan", "alias_pdf": [""]},
+            25: {"nombre_oficial": "San Sebastian Huehuetenango", "alias_pdf": [""]},
+            26: {"nombre_oficial": "Santa Ana Huista", "alias_pdf": [""]},
+            27: {"nombre_oficial": "Santa Barbara", "alias_pdf": [""]},
+            28: {"nombre_oficial": "Santa Cruz Barillas", "alias_pdf": [""]},
+            29: {"nombre_oficial": "Santa Eulalia", "alias_pdf": [""]},
+            30: {"nombre_oficial": "Santiago Chimaltenango", "alias_pdf": [""]},
+            31: {"nombre_oficial": "Tecititan", "alias_pdf": [""]},
+            32: {"nombre_oficial": "Todos Santos Cuchumatan", "alias_pdf": [""]},
+            33: {"nombre_oficial": "Union Cantinil", "alias_pdf": [""]}
         }
         
         search_list = []
@@ -144,8 +169,15 @@ if st.button("INICIAR PROCESO") and uploaded_pdfs and uploaded_xlsx:
         search_list.sort(key=lambda x: (x[1] == 1, -len(x[0])))
 
         EXCEL_MAPPINGS = {
-            1: "totonicapán", 2: "san cristobal", 3: "san francisco", 4: "san andres",
-            5: "momostenango", 6: "santa maria", 7: "santa lucia", 8: "san bartolo"
+            1: "Aguacatan", 2: "chiantla", 3: "colotenango", 4: "concepcion huista", 
+            5: "cuilco", 6: "huehuetenango", 7: "jacaltenango", 8: "la democracia", 
+            9: "la libertad", 10: "malacatancito", 11: "nenton", 11: "petatan", 
+            13: "san anotnio huista", 14: "san gaspar ixchil", 15: "san ildefonso ixtahuacan", 
+            16: "san juan atitan", 17: "san juan ixcoy", 18: "san mateo ixtatan", 19: "san migual acatan", 
+            20: "san pedro necta", 21: "san pedro soloma", 22: "san rafael la independencia", 23: "san rafael petzal", 
+            24: "san sebastian coatan", 25: "san sebastian huehuetenango", 26: "santa ana huista", 27: "santa barbara", 
+            28: "santa cruz barillas", 29: "santa eulalia", 30: "santiago chimaltenango", 31: "tectitan", 
+            32: "todos santos cuchumatan", 33: "union cantinil"
         }
 
         # 3. Map Excel Rows to Municipalities
